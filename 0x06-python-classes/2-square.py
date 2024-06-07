@@ -5,6 +5,7 @@
 
 
 class Square:
+    """Stores the value for square"""
     def __init__(self, size=0):
         """Initializes square and raises TypeError and ValueError respectively
 
