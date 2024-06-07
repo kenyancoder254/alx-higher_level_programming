@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+
+
+""" Defines class square based on 1-square.py"""
+
+
 class Square:
-    """ Defines class square based on 1-square.py"""
     def __init__(self, size=0):
         """Initializes square and raises TypeError and ValueError respectively
 
