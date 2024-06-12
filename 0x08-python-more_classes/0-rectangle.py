@@ -5,4 +5,5 @@
 
 
 class Rectangle:
+    """Empty class that does noting and holds nothing"""
     pass
