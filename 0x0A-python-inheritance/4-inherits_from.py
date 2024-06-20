@@ -9,3 +9,7 @@ def inherits_from(obj, a_class):
         return True
     else:
         return False
+    if isinstance(obj, a_class) is True:
+        return True
+    else:
+        return False
