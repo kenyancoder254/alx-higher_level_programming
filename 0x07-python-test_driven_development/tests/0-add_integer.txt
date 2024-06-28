@@ -1,0 +1,23 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2, 3)
+5
+>>> add_integer('hello')
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(9, 'hello')
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98
+>>> add_integer.__doc__
+'\n    Adds 2 integers or floats after casting them\n    '
+>>> add_integer()
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
