@@ -1,0 +1,26 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix_checker = __import__('2-matrix_divided').matrix_checker
+>>> matrix_length = __import__('2-matrix_divided').matrix_length
+>>> matrix = "hello"
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix = [[3, 9, 12], [15], [24, 27]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+>>> matrix = [[3, 9, 12], [15, 18, 21], [24, 27, 36]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+>>> matrix = [[3, 9, 12], [15, 18, 21], [24, 27, 36]]
+>>> matrix_divided(matrix, "hello")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+>>> matrix_divided(matrix, 3)
+[[1.0, 3.0, 4.0], [5.0, 6.0, 7.0], [8.0, 9.0, 12.0]]
+[[3, 9, 12], [15, 18, 21], [24, 27, 36]]
