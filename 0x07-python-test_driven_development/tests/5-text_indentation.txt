@@ -1,0 +1,19 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Ryan Mwangi. Loise Mburu: What about you?")
+Ryan Mwangi.
+<BLANKLINE>
+<BLANKLINE>
+Loise Mburu:
+<BLANKLINE>
+<BLANKLINE>
+What about you?
+<BLANKLINE>
+<BLANKLINE>
+>>> text_indentation(98)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> text_indentation(False)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
