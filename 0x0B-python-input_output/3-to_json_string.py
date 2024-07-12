@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import json
 """
-Implements function to return JSON rep of an object
+Serializes a python obj to json string
 """
 
 
