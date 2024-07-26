@@ -108,5 +108,6 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """Display a rectangle pattern based on widht and height"""
         for i in range(self.__height):
             print("#" * self.__width)
