@@ -111,3 +111,10 @@ class Rectangle(Base):
         """Display a rectangle pattern based on widht and height"""
         for i in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """Prints a string representation of the class"""
+        return (
+                f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
+                f"{self.__width}/{self.__height}"
+                )
