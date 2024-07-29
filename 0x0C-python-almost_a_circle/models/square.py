@@ -40,6 +40,11 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Assigns attributes"""
-        for key,value in kwargs.items():
-            if hasattr(self, key):
-                setattr(self, key, value)
+        if args:
+            attributes = ['id', 'size', 'x', 'y']
+            for attr, value in zip(attributes, args):
+                setattr(self, attr, value)
+        else:
+            for key, value in kwargs.items():
+                if key in ['id', 'size', 'x', 'y']:
+                    setattr(self, key, value)
