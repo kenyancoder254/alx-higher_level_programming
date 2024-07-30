@@ -36,6 +36,7 @@ class Base:
     def get_nb_objects(cls):
         """Returns incremented value of private instance variable"""
         return cls.__nb_objects
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns JSON string representation of list_dictionaries"""
