@@ -2,6 +2,7 @@
 """
 Creates first class Base to be used in the project
 """
+import json
 
 
 class Base:
@@ -35,3 +36,11 @@ class Base:
     def get_nb_objects(cls):
         """Returns incremented value of private instance variable"""
         return cls.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """Returns JSON string representation of list_dictionaries"""
+        if list_dictionaries is None:
+            return f"[]"
+        else:
+            json_string = json.dumps(list_dictionaries)
+        return json_string
