@@ -48,3 +48,9 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 if key in ['id', 'size', 'x', 'y']:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns dictionary rep of square"""
+        dict_rep = {"id": self.id, "size": self.width,
+                    "x": self.x, "y": self.y}
+        return dict_rep
