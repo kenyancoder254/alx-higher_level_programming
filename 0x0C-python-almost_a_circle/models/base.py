@@ -67,3 +67,9 @@ class Base:
         else:
             json_list = json.loads(json_string)
             return json_list
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes set"""
+        for key, value in dictionary.items():
+            setattr(cls, key, value)
