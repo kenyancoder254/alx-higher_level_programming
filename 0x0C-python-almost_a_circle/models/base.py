@@ -3,6 +3,7 @@
 Creates first class Base to be used in the project
 """
 import json
+import os
 
 
 class Base:
@@ -77,3 +78,14 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+        filename = cls.__name__ + ".json"
+        if not os.path.exists(filename):
+            return []
+        with open(filename, 'r') as file:
+            json_str = file.read()
+            dict_list = cls.from_json_string(json_str)
+        return [cls.create(**dictionary) for dictionary in dict_list]
